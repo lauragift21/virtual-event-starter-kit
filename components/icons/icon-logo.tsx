@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-export default function IconLogo({
-  // backgroundColor = 'transparent',
-  // foregroundColor = 'var(--accents-1)',
-  ...props
-}) {
+type Props = { color?: string; width?: number | string; height?: number | string };
+
+export default function IconLogo({ width, height}: Props) {
   return (
-    <svg width="100%" height="100%" viewBox="0 0 413 413" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg width={width} height={height} viewBox="0 0 413 413" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fillRule="evenodd">
         <g transform="translate(35.01 40)">
           <circle cx="171.49" cy="166.5" r="152.5" fill="#FFF" stroke="#979797" />
@@ -35,6 +33,5 @@ export default function IconLogo({
         </g>
       </g>
     </svg>
-
   );
 }
